@@ -40,6 +40,14 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected $fillable = [
+        'name',
+        'nidnnim',
+        'email',
+        'password',
+        'role',
+    ];
+
     public function role()
     {
         return $this->belongsTo(Role::class);
